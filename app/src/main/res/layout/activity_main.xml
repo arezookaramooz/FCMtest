@@ -8,10 +8,19 @@
     android:orientation="vertical"
     android:background="#cccccc">
 
+
+   <EditText
+       android:id="@+id/sessions_number"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:hint="enter number of session starts"
+       android:textSize="20dp"
+       android:layout_margin="20dp"/>
+
    <Button
+       android:id="@+id/start_button"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:text="start"
-       android:id="@+id/start_button"/>
-
+       android:layout_margin="20dp"/>
 </LinearLayout>

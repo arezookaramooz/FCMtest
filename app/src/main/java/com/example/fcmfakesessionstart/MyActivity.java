@@ -23,9 +23,6 @@ public class MyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
 
-        intent = getIntent();
-        isClosed = intent.getBooleanExtra("isClosed", false);
-
         ComponentName componentName = new ComponentName(MyActivity.this, MyJobService.class);
         info = new JobInfo.Builder(1, componentName)
                 .setPeriodic(10000)
@@ -38,6 +35,9 @@ public class MyActivity extends AppCompatActivity {
         } else {
             Log.d(TAG, "Job Scheduling failed");
         }
+
+        intent = getIntent();
+        isClosed = intent.getBooleanExtra("isClosed", false);
 
         if (isClosed == false) {
             Handler handler = new Handler();
