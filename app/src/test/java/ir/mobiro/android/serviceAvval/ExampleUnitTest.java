@@ -1,4 +1,4 @@
-package com.example.fcmfakesessionstart;
+package ir.mobiro.android.serviceAvval;
 
 import org.junit.Test;
 

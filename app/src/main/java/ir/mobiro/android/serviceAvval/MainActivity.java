@@ -1,4 +1,4 @@
-package com.example.fcmfakesessionstart;
+package ir.mobiro.android.serviceAvval;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,37 +11,42 @@ import android.widget.EditText;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 
-
 public class MainActivity extends AppCompatActivity {
-    public static final String MY_PREFS_NAME = "MyPrefsFile";
+    public static final String MY_PREFS_NAME = "Prefs";
+    public static final String SESSIONS_NUMBER = "sessions number";
     public static final String TAG = "MainActivity";
-    Button startButton;
-    EditText sessionsNumberBox;
-    int sessionsNumber;
+    private Button startButton;
+    private EditText sessionsNumberBox;
+    private int sessionsNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        sessionsNumberBox = findViewById(R.id.sessions_number);
+        findViews();
+        setAnalytics();
 
-        startButton = findViewById(R.id.start_button);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sessionsNumber = Integer.parseInt(sessionsNumberBox.getText().toString());
                 SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
-                editor.putInt("sessions number", sessionsNumber);
+                editor.putInt(SESSIONS_NUMBER, sessionsNumber - 2);
                 editor.apply();
                 Intent myIntent = new Intent(MainActivity.this, MyActivity.class);
                 startActivity(myIntent);
                 finish();
             }
         });
+    }
 
+    private void findViews() {
+        sessionsNumberBox = findViewById(R.id.sessions_number);
+        startButton = findViewById(R.id.start_button);
+    }
 
-        FirebaseAnalytics.getInstance(this).logEvent("SessionStart", null);
+    private void setAnalytics() {
         FirebaseAnalytics.getInstance(this).setMinimumSessionDuration(1);
         FirebaseAnalytics.getInstance(this).setSessionTimeoutDuration(1);
     }

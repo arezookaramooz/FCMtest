@@ -1,42 +1,34 @@
 {
   "project_info": {
-    "project_number": "556486896850",
-    "firebase_url": "https://fcmfakesessionstart.firebaseio.com",
-    "project_id": "fcmfakesessionstart",
-    "storage_bucket": "fcmfakesessionstart.appspot.com"
+    "project_number": "1056710322393",
+    "firebase_url": "https://serviceavval.firebaseio.com",
+    "project_id": "serviceavval",
+    "storage_bucket": "serviceavval.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:556486896850:android:0e70dc7ec8738e63",
+        "mobilesdk_app_id": "1:1056710322393:android:96b3cd01ac402bb3",
         "android_client_info": {
-          "package_name": "com.example.fcmfakesessionstart"
+          "package_name": "ir.mobiro.android.serviceAvval"
         }
       },
       "oauth_client": [
         {
-          "client_id": "556486896850-rcph0r9d6h6kk72qsccb3hgfbu3ipkfh.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.fcmfakesessionstart",
-            "certificate_hash": "4bd1062383d9110d9386e1e2e974e03011d82e40"
-          }
-        },
-        {
-          "client_id": "556486896850-5mphr02b986h1b8engm14uq766ah4v36.apps.googleusercontent.com",
+          "client_id": "1056710322393-6mcf01f21r592njqtuh7p1l7duetleig.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA-L62dEIA0puk9lNrh8jGN0Q-te3Lr32s"
+          "current_key": "AIzaSyBO4p_sk1CKFj6aabvRWKg_1ruA1vKvyXg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "556486896850-5mphr02b986h1b8engm14uq766ah4v36.apps.googleusercontent.com",
+              "client_id": "1056710322393-6mcf01f21r592njqtuh7p1l7duetleig.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
